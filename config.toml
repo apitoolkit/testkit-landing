@@ -1,0 +1,54 @@
+baseurl = "https://apitoolkit.io/"
+title = "APIToolkit.io: Stay on top of your APIs!"
+theme = "apitoolkit"
+languageCode = 'en-us'
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+canonifyURLs = true
+summarylength = 30
+
+[Params]
+mainSections = ["blog"]
+intro = true
+headline = "APIToolkit"
+description = "Automatic API Monitoring and Documentation"
+github = "https://github.com/apitoolkit"
+twitter = "@ApiToolkit"
+email = "hello@apitoolkit.io"
+opengraph = true
+shareTwitter = true
+dateFormat = "Mon, Jan 2, 2006"
+ogimage = "/og.png"
+
+[taxonomies]
+
+[blog]
+showSummary = true
+
+[Permalinks]
+post = "/:filename/"
+
+[markup.goldmark.renderer]
+unsafehtml=true
+unsafe=true
+
+[sitemap]
+theme="apitoolkit" 
+
+[author]
+  [author.anthony]
+    name = "Anthony Alaribe"
+    picture = "https://avatars.githubusercontent.com/u/6564482?v=4"
+  [author.irhose]
+    name = "Irhose Apori"
+    picture = "https://pbs.twimg.com/profile_images/1559779999779020803/Fy5vXl5Q_400x400.jpg"
+  [author.jessica]
+    name = "Jessica Ofem"
+    picture = "https://avatars.githubusercontent.com/u/42941436?v=4"
+  [author.dmytro]
+    name = "Dmytro Krasun"
+    picture = "https://pbs.twimg.com/profile_images/1528386787005063172/JFx3deIq_400x400.jpg"
+  [author.collins]
+    name = "Collins Offiong"
+    picture = "https://avatars.githubusercontent.com/u/93836558?v=4"
