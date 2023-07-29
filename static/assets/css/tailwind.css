@@ -18,6 +18,32 @@
   }
 }
 
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee {
+  padding-block: 10px;
+  background-color: white;
+  display: inline-block;
+  width: 50%;
+  animation: marqueeLeftRight 10s linear infinite;
+  animation-direction: var(--dir);
+}
+
+@keyframes marqueeLeftRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 @layer base {
   h1 {
     @apply text-2xl md:text-6xl font-black;
@@ -36,7 +62,8 @@
   }
 }
 .our_container {
-  width: min(100%, 800px);
+  width: min(100%, 950px);
+  padding-inline: 10px;
 }
 .header_scrolled {
   background-color: rgba(255, 255, 255, 0.5);

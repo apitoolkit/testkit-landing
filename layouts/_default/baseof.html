@@ -1,12 +1,12 @@
 <html prefix="og: http://ogp.me/ns#" lang="{{ .Language }}">
 {{- partial "head.html" . -}}
 
-<body class="relative" onscroll="scrollfunc(this)">
+<body class="relative font-[inter]" onscroll="scrollfunc(this)">
   {{- partial "header.html" . -}}
   <div class="header_scrolled sticky top-0 flex flex-col items-center w-full text-center z-10" id="header">
     <nav class="our_container w-full">
       <div class="flex flex-row justify-between items-center py-2">
-        <a href="/" class="text-2xl font-medium">Testkit.</a>
+        <a href="/" class="text-2xl font-bold">Testkit<span class="text-red-500 text-3xl">.</span></a>
         <ul class="hidden items-center gap-1 hidden sm:flex text-xm md:gap-8">
           <div class="hidden sm:ml-10 sm:flex sm:space-x-1 lg:space-x-3">
             <a target="_self"
