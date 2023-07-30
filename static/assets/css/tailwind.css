@@ -25,10 +25,11 @@
 
 .marquee {
   padding-block: 10px;
-  background-color: white;
-  display: inline-block;
-  width: 50%;
-  animation: marqueeLeftRight 10s linear infinite;
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: marqueeLeftRight 30s linear infinite;
   animation-direction: var(--dir);
 }
 
