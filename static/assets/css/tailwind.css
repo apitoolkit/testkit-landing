@@ -45,6 +45,32 @@
   }
 }
 
+.animated-link {
+  padding: 0.5em 0.8em;
+  border-radius: 1em;
+}
+
+.action-link {
+  color: var(--accentColorT);
+}
+.animated-link:hover .hover-arrow .hover-arrow-tip {
+  transform: translateX(0.15em);
+}
+.animated-link:hover .hover-arrow .hover-arrow-line {
+  display: block;
+}
+
+.hover-arrow {
+  position: relative;
+  top: 1px;
+  stroke-width: 2px;
+  fill: none;
+  stroke: currentColor;
+}
+.hover-arrow .hover-arrow-line {
+  display: none;
+}
+
 @layer base {
   h1 {
     @apply text-2xl md:text-6xl font-black;
