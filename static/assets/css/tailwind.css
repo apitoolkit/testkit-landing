@@ -47,7 +47,6 @@
 
 .animated-link {
   padding: 0.5em 0.8em;
-  border-radius: 1em;
 }
 
 .animated-link:hover .hover-arrow .hover-arrow-tip {
@@ -68,6 +67,12 @@
   display: none;
 }
 
+.yaml_key {
+  @apply text-blue-300;
+}
+.yaml_val_str {
+  color: #d8fa3c;
+}
 @layer base {
   h1 {
     @apply text-2xl md:text-6xl font-black;
@@ -86,7 +91,7 @@
   }
 }
 .our_container {
-  width: min(100%, 850px);
+  width: min(100%, 896px);
   padding-inline: 10px;
 }
 .header_scrolled {
