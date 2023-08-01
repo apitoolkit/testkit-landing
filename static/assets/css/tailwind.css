@@ -67,7 +67,7 @@
   display: none;
 }
 .tab_active {
-  @apply border-b-purple-500 border-b-2 text-purple-500;
+  @apply border-b-red-500 border-b-2 text-red-500;
 }
 .yaml_key {
   @apply text-blue-300;
@@ -86,7 +86,7 @@
   color: #d8fa3c;
 }
 .letter {
-  @apply rounded-lg px-4 py-5 bg-white text-purple-500 text-lg font-bold;
+  @apply rounded-lg px-4 py-5 bg-white text-red-500 text-lg font-bold;
 }
 @layer base {
   h1 {
