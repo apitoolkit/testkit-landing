@@ -199,7 +199,7 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                     <div class="relative">
                         <div class="-mx-4 sm:mx-0">
                             <div
-                                class="relative overflow-hidden shadow-xl flex bg-slate-800 h-[31.625rem] max-h-[60vh] sm:max-h-[none] sm:rounded-xl lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none]">
+                                class="relative overflow-hidden shadow-xl flex bg-slate-800 h-[31.625rem] max-h-[60vh]] sm:rounded-xl lg:h-[34.6875rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10">
                                 <div class="relative w-full flex flex-col">
                                     <div class="flex-none border-b border-slate-500/30 flex items-center gap-8">
                                         <div class="flex items-center h-8 space-x-1.5 px-3">
@@ -289,31 +289,60 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
  23
  24
  25
- </div><code class="flex-auto relative block text-slate-50 pt-4 pb-4 px-4 overflow-auto">- <span class="yaml_key">name</span>: <span class="yaml_val_str">Current User</span>
-  <span class="yaml_key">GET</span>: <span class="yaml_val_str">'$.env.APIURL/user'</span>
-  <span class="yaml_key">headers</span>:
-    <span class="yaml_key">Content-Type</span>: <span class="yaml_val_str">application/json</span>
-    <span class="yaml_key">Authorization</span>: <span class="yaml_val_str">'Bearer $.env.TOKEN'</span>
-  <span class="yaml_key">asserts</span>:
-    <span class="yaml_key">exists</span>: <span class="yaml_val_str">$.resp.json.user</span>
-    <span class="yaml_key">ok</span>: <span class="yaml_val_str">$.resp.json.user.username == Jon Doe</span>
-    <span class="yaml_key">string</span>: <span class="yaml_val_str">$.resp.json.user.bio</span>
-    <span class="yaml_key">date</span>: <span class="yaml_val_str">$.resp.json.user.updatedAt '%Y-%m-%d %H:%M:%S'</span>
-    <span class="yaml_key">number</span>: <span class="yaml_val_str">$.resp.json.user.id</span>
-  <span class="yaml_key">exports</span>:
-    <span class="yaml_key">userID</span>: <span class="yaml_val_str">$.resp.json.user.id</span>
-    <span class="yaml_key">updatedAt</span>: <span class="yaml_val_str">$.resp.json.user.updatedAt</span>
-- <span class="yaml_key">name</span>: <span class="yaml_val_str">Update User</span>
-  <span class="yaml_key">PUT</span>: <span class="yaml_val_str">'$.env.APIURL/user'</span>
-  <span class="yaml_key">headers</span>:
-    <span class="yaml_key">Content-Type</span>: <span class="yaml_val_str">application/json</span>
-    <span class="yaml_key">Authorization</span>: <span class="yaml_val_str">'Bearer $.env.TOKEN'</span>
-  <span class="yaml_key">json</span>: <span class="yaml_val_str">'{"user":{"email":"$.env.EMAIL", "bio": "hello world"}}'</span>
-  <span class="yaml_key">asserts</span>:
-    <span class="yaml_key">ok</span>: <span class="yaml_val_str">$.resp.status == 200</span>
-    <span class="yaml_key">exists</span>: <span class="yaml_val_str">$.resp.json.user.email</span>
-    <span class="yaml_key">ok</span>: <span class="yaml_val_str">$.resp.json.user.id == $.stages[-1].userID</span>
-    <span class="yaml_key">ok</span>: <span class="yaml_val_str">$.resp.json.user.updatedAt != $.stages[-1].updatedAt</span>
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ </div><code class="flex-auto relative block text-slate-50 pt-4 pb-4 px-4 overflow-auto"><span class="hljs-title function_">describe</span>(<span class="hljs-string">'User API tests'</span>, <span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-title function_">it</span>(<span class="hljs-string">'should get the current user information and update user'</span>, <span class="hljs-function">() =&gt;</span> {
+    cy.<span class="hljs-title function_">request</span>({
+      <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+      <span class="hljs-attr">url</span>: <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'APIURL'</span>) + <span class="hljs-string">'/user'</span>,
+      <span class="hljs-attr">headers</span>: {
+        <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>,
+        <span class="hljs-string">'Authorization'</span>: <span class="hljs-string">'Bearer '</span> + <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'TOKEN'</span>)
+      }
+    }).<span class="hljs-title function_">then</span>(<span class="hljs-function">(<span class="hljs-params">response</span>) =&gt;</span> {
+      <span class="hljs-title function_">expect</span>(response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>).<span class="hljs-property">to</span>.<span class="hljs-property">exist</span>;
+      <span class="hljs-title function_">expect</span>(response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">username</span>).<span class="hljs-property">to</span>.<span class="hljs-title function_">equal</span>(<span class="hljs-string">'Jon Doe'</span>);
+      <span class="hljs-title function_">expect</span>(response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">bio</span>).<span class="hljs-property">to</span>.<span class="hljs-property">be</span>.<span class="hljs-title function_">a</span>(<span class="hljs-string">'string'</span>);
+      <span class="hljs-title function_">expect</span>(response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">updatedAt</span>).<span class="hljs-property">to</span>.<span class="hljs-title function_">match</span>(<span class="hljs-regexp">/\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}/</span>);
+      <span class="hljs-title function_">expect</span>(response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">id</span>).<span class="hljs-property">to</span>.<span class="hljs-property">be</span>.<span class="hljs-title function_">a</span>(<span class="hljs-string">'number'</span>);
+      <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'userID'</span>, response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">id</span>);
+      <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'updatedAt'</span>, response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">updatedAt</span>);
+      cy.<span class="hljs-title function_">request</span>({
+        <span class="hljs-attr">method</span>: <span class="hljs-string">'PUT'</span>,
+        <span class="hljs-attr">url</span>: <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'APIURL'</span>) + <span class="hljs-string">'/user'</span>,
+        <span class="hljs-attr">headers</span>: {
+          <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>,
+          <span class="hljs-string">'Authorization'</span>: <span class="hljs-string">'Bearer '</span> + <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'TOKEN'</span>)
+        },
+        <span class="hljs-attr">body</span>: {
+          <span class="hljs-attr">user</span>: {
+            <span class="hljs-attr">email</span>: <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'EMAIL'</span>),
+            <span class="hljs-attr">bio</span>: <span class="hljs-string">'hello world'</span>
+          }
+        }
+      }).<span class="hljs-title function_">then</span>(<span class="hljs-function">(<span class="hljs-params">updateResponse</span>) =&gt;</span> {
+        <span class="hljs-title function_">expect</span>(updateResponse.<span class="hljs-property">status</span>).<span class="hljs-property">to</span>.<span class="hljs-title function_">equal</span>(<span class="hljs-number">200</span>);
+        <span class="hljs-title function_">expect</span>(updateResponse.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">email</span>).<span class="hljs-property">to</span>.<span class="hljs-property">exist</span>;
+        <span class="hljs-title function_">expect</span>(updateResponse.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">id</span>).<span class="hljs-property">to</span>.<span class="hljs-title function_">equal</span>(<span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'userID'</span>));
+        <span class="hljs-title function_">expect</span>(updateResponse.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">updatedAt</span>).<span class="hljs-property">not</span>.<span class="hljs-property">to</span>.<span class="hljs-title function_">equal</span>(<span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'updatedAt'</span>));
+      });
+    });
+  });
+});
  </code></pre>
                                             </div>
                                         </div>

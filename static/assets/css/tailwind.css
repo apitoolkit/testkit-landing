@@ -75,6 +75,16 @@
 .yaml_val_str {
   color: #d8fa3c;
 }
+.hljs-title {
+  color: #f22c3d;
+}
+.hljs-attr,
+.hljs-number {
+  color: #df3079;
+}
+.hljs-string {
+  color: #d8fa3c;
+}
 @layer base {
   h1 {
     @apply text-2xl md:text-6xl font-black;

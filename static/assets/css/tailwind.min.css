@@ -1702,12 +1702,12 @@ img {
   border-bottom-width: 1px;
 }
 
-.border-b-2 {
-  border-bottom-width: 2px;
-}
-
 .border-t {
   border-top-width: 1px;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
 }
 
 .border-slate-500\/30 {
@@ -1742,11 +1742,6 @@ img {
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
-}
-
-.border-b-purple-500 {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(168 85 247 / var(--tw-border-opacity));
 }
 
 .bg-purple-500 {
@@ -2325,6 +2320,19 @@ img {
 }
 
 .yaml_val_str {
+  color: #d8fa3c;
+}
+
+.hljs-title {
+  color: #f22c3d;
+}
+
+.hljs-attr,
+.hljs-number {
+  color: #df3079;
+}
+
+.hljs-string {
   color: #d8fa3c;
 }
 
