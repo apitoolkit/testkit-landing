@@ -1709,6 +1709,10 @@ img {
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -2065,6 +2069,11 @@ img {
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .pr-4 {
@@ -2891,6 +2900,10 @@ img {
 
   .md\:leading-\[55px\] {
     line-height: 55px;
+  }
+
+  .md\:leading-tight {
+    line-height: 1.25;
   }
 }
 

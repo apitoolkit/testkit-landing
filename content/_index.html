@@ -9,14 +9,14 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
 
     <main class="relative text-lg">
         <img src="/assets/img/lines.svg" alt="" class="absolute right-0">
-        <section class="relative overflow-hidden py-10 sm:py-12 lg:py-16">
+        <section class="relative overflow-hidden py-10 sm:py-12 lg:py-16 border-b">
             <div class="our_container relative mx-auto">
                 <div class="mx-auto w-full text-left">
                     <h1>
                         <span data-br=":Ra2r6r9ja:" data-brr="1"
                             style="display: inline-block; vertical-align: top; text-decoration: inherit; max-width: 671px;">
                             <span
-                                class="text-[26px] leading-[32px] sm:text-3xl md:text-5xl md:leading-[55px] font-bold text-black">
+                                class="text-[26px] leading-[32px] sm:text-3xl md:text-5xl md:leading-tight font-bold text-black">
                                 Quality Assurance <br> at Scale with Testkit.
                             </span>
                         </span>
@@ -26,29 +26,13 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                         less effort.
                     </p>
                 </div>
-                <div class="relative -mx-5 mt-8 ring-1 ring-slate-900/5 sm:mx-0 sm:rounded-2xl max-w-xl">
-                    <!-- <div class="flex absolute -bottom-px left-1/2 -ml-48 h-[2px] w-96">
-                        <div
-                            class="w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]">
-                        </div>
-                        <div
-                            class="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]">
-                        </div>
-                        <div
-                            class="-ml-[100%] w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]">
-                        </div>
-                        <div
-                            class="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]">
-                        </div>
-                    </div> -->
-                    <div class="relative flex flex-col items-center bg-slate-50 px-5 py-8 sm:rounded-2xl">
-                        <p class="flex items-center justify-center"><span
-                                class="text-[2.5rem] leading-none text-slate-900">$<span
+                <div class="relative -mx-5 mt-8 ring-1 ring-slate-900/5 sm:mx-0 sm:rounded-2xl w-fit">
+                    <div class="relative flex flex-col bg-slate-50 py-8 px-16 sm:rounded-2xl">
+                        <p class="flex items-center"><span class="text-[2.5rem] leading-none text-slate-900">$<span
                                     class="font-bold">49</span></span><span class="ml-3 text-sm"><span
                                     class="font-semibold text-slate-900">one-time payment</span><br><span
                                     class="text-slate-500">.</span></span></p>
-                        <p
-                            class="order-last -mx-1 mt-4 flex justify-center text-sm leading-6 text-slate-500 sm:space-x-2">
+                        <p class="order-last -mx-1 mt-4 flex text-sm leading-6 text-slate-500 sm:space-x-2">
                             <span class="hidden sm:inline">Lifetime access.</span><span
                                 class="hidden sm:inline">Unlimited
                                 projects.</span><span class="hidden sm:inline">Free updates.</span><span
@@ -91,8 +75,7 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                 <p class="mt-4 max-w-lg text-base md:text-lg text-gray-600">
                     Effortlessly write and customize your tests using
                     YAML or with our intuitive
-                    interface that makes testing a breeze for testers of all skill levels, including the
-                    non-programmers.
+                    interface that makes testing a breeze.
                 </p>
                 <div class="w-full flex flex-col mt-8">
                     <div class="flex gap-4 mb-4">
@@ -209,44 +192,47 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
  38
  39
  40
- </div><code class="flex-auto relative block text-slate-50 pt-4 pb-4 px-4 overflow-auto"><span class="hljs-title function_">describe</span>(<span class="hljs-string">'User API tests'</span>, <span class="hljs-function">() =&gt;</span> {
-  <span class="hljs-title function_">it</span>(<span class="hljs-string">'should get the current user information and update user'</span>, <span class="hljs-function">() =&gt;</span> {
-    cy.<span class="hljs-title function_">request</span>({
-      <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
-      <span class="hljs-attr">url</span>: <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'APIURL'</span>) + <span class="hljs-string">'/user'</span>,
-      <span class="hljs-attr">headers</span>: {
-        <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>,
-        <span class="hljs-string">'Authorization'</span>: <span class="hljs-string">'Bearer '</span> + <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'TOKEN'</span>)
-      }
-    }).<span class="hljs-title function_">then</span>(<span class="hljs-function">(<span class="hljs-params">response</span>) =&gt;</span> {
-      <span class="hljs-title function_">expect</span>(response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>).<span class="hljs-property">to</span>.<span class="hljs-property">exist</span>;
-      <span class="hljs-title function_">expect</span>(response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">username</span>).<span class="hljs-property">to</span>.<span class="hljs-title function_">equal</span>(<span class="hljs-string">'Jon Doe'</span>);
-      <span class="hljs-title function_">expect</span>(response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">bio</span>).<span class="hljs-property">to</span>.<span class="hljs-property">be</span>.<span class="hljs-title function_">a</span>(<span class="hljs-string">'string'</span>);
-      <span class="hljs-title function_">expect</span>(response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">updatedAt</span>).<span class="hljs-property">to</span>.<span class="hljs-title function_">match</span>(<span class="hljs-regexp">/\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}/</span>);
-      <span class="hljs-title function_">expect</span>(response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">id</span>).<span class="hljs-property">to</span>.<span class="hljs-property">be</span>.<span class="hljs-title function_">a</span>(<span class="hljs-string">'number'</span>);
-      <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'userID'</span>, response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">id</span>);
-      <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'updatedAt'</span>, response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">updatedAt</span>);
-      cy.<span class="hljs-title function_">request</span>({
-        <span class="hljs-attr">method</span>: <span class="hljs-string">'PUT'</span>,
-        <span class="hljs-attr">url</span>: <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'APIURL'</span>) + <span class="hljs-string">'/user'</span>,
-        <span class="hljs-attr">headers</span>: {
-          <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>,
-          <span class="hljs-string">'Authorization'</span>: <span class="hljs-string">'Bearer '</span> + <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'TOKEN'</span>)
-        },
-        <span class="hljs-attr">body</span>: {
-          <span class="hljs-attr">user</span>: {
-            <span class="hljs-attr">email</span>: <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'EMAIL'</span>),
-            <span class="hljs-attr">bio</span>: <span class="hljs-string">'hello world'</span>
-          }
-        }
-      }).<span class="hljs-title function_">then</span>(<span class="hljs-function">(<span class="hljs-params">updateResponse</span>) =&gt;</span> {
-        <span class="hljs-title function_">expect</span>(updateResponse.<span class="hljs-property">status</span>).<span class="hljs-property">to</span>.<span class="hljs-title function_">equal</span>(<span class="hljs-number">200</span>);
-        <span class="hljs-title function_">expect</span>(updateResponse.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">email</span>).<span class="hljs-property">to</span>.<span class="hljs-property">exist</span>;
-        <span class="hljs-title function_">expect</span>(updateResponse.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">id</span>).<span class="hljs-property">to</span>.<span class="hljs-title function_">equal</span>(<span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'userID'</span>));
-        <span class="hljs-title function_">expect</span>(updateResponse.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">updatedAt</span>).<span class="hljs-property">not</span>.<span class="hljs-property">to</span>.<span class="hljs-title function_">equal</span>(<span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'updatedAt'</span>));
-      });
+ 41
+ </div><code class="flex-auto relative block text-slate-50 pt-4 pb-4 px-4 overflow-auto"><span class="hljs-title function_">describe</span>(<span class="hljs-string">'User API tests'</span>, <span >() =&gt;</span> {
+    <span class="hljs-title function_">it</span>(<span class="hljs-string">'should get the current user'</span>, <span >() =&gt;</span> {
+        cy.<span class="hljs-title function_">request</span>({
+            <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+            <span class="hljs-attr">url</span>: <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'APIURL'</span>) + <span class="hljs-string">'/user'</span>,
+            <span class="hljs-attr">headers</span>: {
+                <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>,
+                <span class="hljs-string">'Authorization'</span>: <span class="hljs-string">'Bearer '</span> + <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'TOKEN'</span>)
+            }
+        }).<span class="hljs-title function_">then</span>(<span >(<span class="hljs-params">response</span>) =&gt;</span> {
+            <span class="hljs-title function_">expect</span>(response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>).<span class="hljs-property">to</span>.<span class="hljs-property">exist</span>;
+            <span class="hljs-title function_">expect</span>(response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">username</span>).<span class="hljs-property">to</span>.<span class="hljs-title function_">equal</span>(<span class="hljs-string">'Jon Doe'</span>);
+            <span class="hljs-title function_">expect</span>(response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">bio</span>).<span class="hljs-property">to</span>.<span class="hljs-property">be</span>.<span class="hljs-title function_">a</span>(<span class="hljs-string">'string'</span>).<span class="hljs-property">and</span>.<span class="hljs-property">not</span>.<span class="hljs-property">empty</span>;
+            <span class="hljs-title function_">expect</span>(response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">updatedAt</span>).<span class="hljs-property">to</span>.<span class="hljs-title function_">match</span>(<span class="hljs-regexp">/\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}/</span>);
+            <span class="hljs-title function_">expect</span>(response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">id</span>).<span class="hljs-property">to</span>.<span class="hljs-property">be</span>.<span class="hljs-title function_">a</span>(<span class="hljs-string">'number'</span>);
+            <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'userID'</span>, response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">id</span>);
+            <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'updatedAt'</span>, response.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">updatedAt</span>);
+        });
     });
-  });
+    <span class="hljs-title function_">it</span>(<span class="hljs-string">'should update the user'</span>, <span >() =&gt;</span> {
+        cy.<span class="hljs-title function_">request</span>({
+            <span class="hljs-attr">method</span>: <span class="hljs-string">'PUT'</span>,
+            <span class="hljs-attr">url</span>: <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'APIURL'</span>) + <span class="hljs-string">'/user'</span>,
+            <span class="hljs-attr">headers</span>: {
+                <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>,
+                <span class="hljs-string">'Authorization'</span>: <span class="hljs-string">'Bearer '</span> + <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'TOKEN'</span>)
+            },
+            <span class="hljs-attr">body</span>: {
+                <span class="hljs-attr">user</span>: {
+                    <span class="hljs-attr">email</span>: <span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'EMAIL'</span>),
+                    <span class="hljs-attr">bio</span>: <span class="hljs-string">'hello world'</span>
+                }
+            }
+        }).<span class="hljs-title function_">then</span>(<span >(<span class="hljs-params">updateResponse</span>) =&gt;</span> {
+            <span class="hljs-title function_">expect</span>(updateResponse.<span class="hljs-property">status</span>).<span class="hljs-property">to</span>.<span class="hljs-title function_">equal</span>(<span class="hljs-number">200</span>);
+            <span class="hljs-title function_">expect</span>(updateResponse.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">email</span>).<span class="hljs-property">to</span>.<span class="hljs-property">exist</span>;
+            <span class="hljs-title function_">expect</span>(updateResponse.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">id</span>).<span class="hljs-property">to</span>.<span class="hljs-title function_">equal</span>(<span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'userID'</span>));
+            <span class="hljs-title function_">expect</span>(updateResponse.<span class="hljs-property">body</span>.<span class="hljs-property">user</span>.<span class="hljs-property">updatedAt</span>).<span class="hljs-property">not</span>.<span class="hljs-property">to</span>.<span class="hljs-title function_">equal</span>(<span class="hljs-title class_">Cypress</span>.<span class="hljs-title function_">env</span>(<span class="hljs-string">'updatedAt'</span>));
+        });
+    });
 });
  </code></pre>
                                             </div>
@@ -431,7 +417,7 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
             </div>
         </section>
         <section class="w-full">
-            <div class="w-[min(100%,1200px)] mx-auto">
+            <div class="w-[min(100%,1200px)] mx-auto my-24">
                 <h3 class="mb-8">Developers love Testkit</h3>
                 <div
                     class="relative  text-left grid grid-cols-1 w-full gap-6 lg:gap-8 sm:grid-cols-2 max-h-[33rem] mb-10 overflow-hidden">
@@ -581,6 +567,8 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                     document.querySelector("#cypress-eg").classList.remove("hidden")
                 }
             }
+
+
         </script>
     </main>
 
