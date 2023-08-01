@@ -85,6 +85,9 @@
 .hljs-string {
   color: #d8fa3c;
 }
+.letter {
+  @apply rounded-lg px-4 py-5 bg-white text-purple-500 text-lg font-bold;
+}
 @layer base {
   h1 {
     @apply text-2xl md:text-6xl font-black;

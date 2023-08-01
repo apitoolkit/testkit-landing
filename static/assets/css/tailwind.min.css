@@ -1427,10 +1427,6 @@ img {
   height: 31.625rem;
 }
 
-.\!h-auto {
-  height: auto !important;
-}
-
 .h-8 {
   height: 2rem;
 }
@@ -1449,14 +1445,6 @@ img {
 
 .h-5 {
   height: 1.25rem;
-}
-
-.max-h-\[60vh\] {
-  max-height: 60vh;
-}
-
-.max-h-\[none\] {
-  max-height: none;
 }
 
 .min-h-0 {
@@ -1610,16 +1598,16 @@ img {
   margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-x-3 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
@@ -1782,6 +1770,16 @@ img {
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.bg-purple-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 213 255 / var(--tw-bg-opacity));
+}
+
+.bg-purple-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(216 180 254 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -2336,6 +2334,21 @@ img {
   color: #d8fa3c;
 }
 
+.letter {
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(168 85 247 / var(--tw-text-opacity));
+}
+
 .our_container {
   width: min(100%, 896px);
   padding-inline: 10px;
@@ -2470,10 +2483,6 @@ img {
 
   .sm\:mt-0 {
     margin-top: 0px;
-  }
-
-  .sm\:max-h-\[none\] {
-    max-height: none;
   }
 
   .sm\:w-96 {
@@ -2639,10 +2648,6 @@ img {
 
   .xl\:grid {
     display: grid;
-  }
-
-  .xl\:h-\[31\.625rem\] {
-    height: 31.625rem;
   }
 
   .xl\:grid-cols-3 {
