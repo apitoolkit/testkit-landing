@@ -16,12 +16,12 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                         <span data-br=":Ra2r6r9ja:" data-brr="1"
                             style="display: inline-block; vertical-align: top; text-decoration: inherit; max-width: 671px;">
                             <span
-                                class="text-[26px] leading-[32px] sm:text-3xl md:text-5xl md:leading-tight font-bold text-black">
-                                Quality Assurance at Scale with Testkit<span class="text-red-500 text-3xl">.</span>
+                                class="text-[26px] leading-[32px] sm:text-3xl md:text-5xl md:leading-[55px] font-bold text-black">
+                                Quality Assurance <br> at Scale with Testkit.
                             </span>
                         </span>
                     </h1>
-                    <p class="mt-4 max-w-lg">
+                    <p class="mt-4 max-w-lg text-base md:text-lg text-gray-600">
                         No-Code and Low code approach to E2E API testing, Load testing and Performance Testing with 90%
                         less effort.
                     </p>
@@ -56,7 +56,7 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                                 lifetime access and free updates.</span>
                         </p>
                         <a href="https://www.github.com/apitoolkit/testkit/Examples"
-                            class="animated-link link-fav-action bg-red-500 rounded mt-4 w-48 text-center font-semibold flex items-center text-white py-1 hover:shadow-2xl">
+                            class="animated-link  bg-slate-900 rounded-lg mt-4 w-48 text-center font-semibold flex items-center text-white py-1 hover:shadow-2xl">
                             <span>Get Desktop App</span>
                             &nbsp;
                             <svg class="hover-arrow" width="10" height="10" viewBox="0 0 10 10" aria-fill="green">
@@ -73,37 +73,38 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
         </section>
         <section class="my-20 border-b">
             <div class="our_container mx-auto text-left">
+                <div class="flex mb-6 items-center space-x-3">
+                    <div class="rounded-full h-9 w-9 border flex items-center justify-center bg-black">
+                        <svg viewBox="0 0 24 24" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M7 15L10 12L7 9M13 15H17M22 12C22 17.5228 17.5228 22 12" stroke="white"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="text-gray-900 font-semibold text-lg md:text-xl">the CLI</div>
+                </div>
                 <h3 class="text-2xl font-bold tracking-tight text-gray-800 md:text-3xl md:max-w-lg">
-                    Simplicity of yaml, flexibility of a programming language.
+                    Simplicity of yaml, <br>flexibility of a language.
                 </h3>
-                <p class="mt-4">
+                <p class="mt-4 max-w-lg text-base md:text-lg text-gray-600">
                     Effortlessly write and customize your tests using
                     YAML or with our intuitive
                     interface that makes testing a breeze for testers of all skill levels, including the
                     non-programmers.
                 </p>
-                <a href="https://www.github.com/apitoolkit/testkit/Examples"
-                    class="animated-link link-fav-action bg-red-500 rounded w-fit mt-4 font-semibold flex items-center text-white px-4 py-2 hover:shadow-2xl">
-                    <span>Get the CLI</span>
-                    &nbsp;
-                    <svg class="hover-arrow" width="10" height="10" viewBox="0 0 10 10" aria-fill="green">
-                        <g fill-rule="evenodd">
-                            <path class="hover-arrow-line" d="M0 5h7"></path>
-                            <path class="hover-arrow-tip" d="M1 1l4 4-4 4"></path>
-                        </g>
-                    </svg>
-                </a>
                 <div class="w-full flex flex-col mt-8">
                     <div class="flex gap-4 mb-4">
-                        <button class="tab_btn px-2 font-bold tab_active" onclick="changeExampleTab('testkit')"
-                            id="tk_btn">Testkit</button>
-                        <button class="tab_btn font-bold text-slate-400 px-2" onclick="changeExampleTab('cypress')"
+                        <button class="tab_btn px-2 font-bold text-slate-500 tab_active"
+                            onclick="changeExampleTab('testkit')" id="tk_btn">Testkit</button>
+                        <button class="tab_btn font-bold text-slate-500 px-2" onclick="changeExampleTab('cypress')"
                             id="cp_btn">Cypress</button>
                     </div>
                     <div class="relative">
                         <div class="-mx-4 sm:mx-0">
                             <div
-                                class="relative overflow-hidden shadow-xl flex bg-slate-800 h-[31.625rem] max-h-[60vh]] sm:rounded-xl lg:h-[34.6875rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10">
+                                class="relative overflow-hidden  flex bg-slate-800 h-[31.625rem] max-h-[60vh]] sm:rounded-xl lg:h-[34.6875rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10">
                                 <div class="relative w-full flex flex-col">
                                     <div class="flex-none border-b border-slate-500/30 flex items-center gap-8">
                                         <div class="flex items-center h-8 space-x-1.5 px-3">
@@ -111,7 +112,7 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                                             <div class="w-2.5 h-2.5 bg-slate-600 rounded-full"></div>
                                             <div class="w-2.5 h-2.5 bg-slate-600 rounded-full"></div>
                                         </div>
-                                        <span class="text-slate-400">test.tk.yaml</span>
+                                        <span class="text-slate-400 text-sm" id="file_name">test.tk.yaml</span>
                                     </div>
                                     <div class="relative min-h-0 flex-auto flex flex-col">
                                         <div class="w-full flex-auto flex min-h-0 overflow-auto">
@@ -255,17 +256,75 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="overflow-hidden border-t">
+                <div class="our_container mx-auto my-24 text-left">
+                    <div class="section-padding-top section-padding-bottom container">
+                        <div class="flex flex-col items-center md:justify-between md:flex-row md:space-x-10">
+                            <div class="space-y-4 max-w-xl">
+                                <div class="space-y-3">
+                                    <h1><span class="text-lg md:text-xl font-bold text-black">Blazingly Fast</span>
+                                    </h1>
+                                    <p>
+                                        <span class="text-sm md:text-lg font-medium text-gray-600">
+                                            With the fast CLI written in Rust and the convenience of writing YAML
+                                            instead of your favorite language, using Testkit increases developer
+                                            velocity and reduces test run times.
+                                        </span>
+                                    </p>
+                                </div>
+                                <a href="https://www.github.com/apitoolkit/testkit"
+                                    class="animated-link  bg-slate-900 rounded-lg w-fit mt-4 font-semibold flex items-center text-white px-4 py-1 hover:shadow-2xl">
+                                    <span>Get the CLI</span>
+                                    &nbsp;
+                                    <svg class="hover-arrow" width="10" height="10" viewBox="0 0 10 10"
+                                        aria-fill="green">
+                                        <g fill-rule="evenodd">
+                                            <path class="hover-arrow-line" d="M0 5h7"></path>
+                                            <path class="hover-arrow-tip" d="M1 1l4 4-4 4"></path>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
 
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="my-20 relative border-b">
             <div class="our_container mx-auto text-left">
+                <div class="flex mb-8 items-center space-x-3">
+                    <div class="rounded-full h-9 w-9 flex items-center justify-center ">
+                        <svg viewBox="-0.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <title>desktop</title>
+                                <desc>Created with Sketch Beta.</desc>
+                                <defs> </defs>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                    sketch:type="MSPage">
+                                    <g id="Icon-Set-Filled" sketch:type="MSLayerGroup"
+                                        transform="translate(-570.000000, -465.000000)" fill="#000000">
+                                        <path
+                                            d="M597,465 L574,465 C571.791,465 570,466.791 570,469 L570,483 L601,483 L601,469 C601,466.791 599.209,465 597,465 L597,465 Z M570,487 C570,489.209 571.791,491 574,491 L597,491 C599.209,491 601,489.209 601,487 L601,485 L570,485 L570,487 L570,487 Z M592,495 L590,495 L590,493 L582,493 L582,495 L580,495 C579.447,495 579,495.448 579,496 C579,496.553 579.447,497 580,497 L592,497 C592.553,497 593,496.553 593,496 C593,495.448 592.553,495 592,495 L592,495 Z"
+                                            id="desktop" sketch:type="MSShapeGroup"> </path>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="text-gray-900 font-semibold text-lg md:text-xl">deskop app</div>
+                </div>
                 <h3 class="text-2xl font-bold tracking-tight text-gray-800 md:text-3xl md:max-w-lg">
-                    Build and Test APIs using our desktop app
-                </h3>
+                    Build and Test APIs <br>using our desktop app </h3>
                 <p class="mt-4">
-                    Supercharge your API testing process with our cutting-edge desktop app, empowering developers and
+                    Supercharge your API testing process with our cutting-edge desktop app, empowering
+                    developers and
                     testers
                     alike to effortlessly
                     design, execute, and manage comprehensive API tests for flawless performance and unbeatable
@@ -274,7 +333,7 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
 
                 <div class="w-full flex flex-col mt-8">
                     <div
-                        class="w-full flex flex-col gap-16 items-center justify-center rounded-t-lg h-[min(75vw,600px)] bg-red-300 overflow-hidden">
+                        class="w-full flex flex-col gap-16 items-center justify-center rounded-t-lg h-[min(75vw,600px)] bg-slate-900 overflow-hidden">
                         <p class="space-x-2">
                             <span class="letter">C</span><span class="letter">O</span><span class="letter">M</span><span
                                 class="letter">I</span><span class="letter">N</span><span class="letter">G</span>
@@ -287,11 +346,56 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
 
                 </div>
             </div>
+            <div class="overflow-hidden border-t">
+                <div class="our_container mx-auto my-24 text-left">
+                    <div class="section-padding-top section-padding-bottom container">
+                        <div class="flex flex-col items-center md:justify-between md:flex-row md:space-x-10">
+                            <div class="space-y-4 max-w-xl">
+                                <div class="space-y-3">
+                                    <h1><span class="text-lg md:text-xl font-bold text-black">No code API testing</span>
+                                    </h1>
+                                    <p>
+                                        <span class="text-sm md:text-lg font-medium text-gray-600">
+                                            Use the desktop app's test builder to quickly create e2e tests by simply
+                                            dragging and dropping test components
+                                        </span>
+                                    </p>
+                                </div>
+                                <a href="https://www.github.com/apitoolkit/testkit"
+                                    class="animated-link  bg-slate-900 rounded-lg w-fit mt-4 font-semibold flex items-center text-white px-4 py-1 hover:shadow-2xl">
+                                    <span>Get desktop app</span>
+                                    &nbsp;
+                                    <svg class="hover-arrow" width="10" height="10" viewBox="0 0 10 10"
+                                        aria-fill="green">
+                                        <g fill-rule="evenodd">
+                                            <path class="hover-arrow-line" d="M0 5h7"></path>
+                                            <path class="hover-arrow-tip" d="M1 1l4 4-4 4"></path>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="relative my-20 border-b">
             <div class="our_container mx-auto text-left">
+                <div class="flex mb-4 items-center space-x-3">
+                    <div class="rounded-full h-9 w-9 border flex items-center justify-center bg-black">
+                        <svg viewBox="0 0 24 24" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M7 15L10 12L7 9M13 15H17M22 12C22 17.5228 17.5228 22 12" stroke="white"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="text-gray-900 font-semibold text-lg md:text-xl">The CLI</div>
+                </div>
                 <h3 class="text-2xl font-bold tracking-tight text-gray-800 md:text-3xl md:max-w-lg">
-                    Schedule and run tests periodically with APIToolkit
+                    Schedule and run tests <br>periodically with APIToolkit
                 </h3>
                 <p class="mt-4">
                     Effortlessly automate your API testing regime with APIToolkit's intuitive scheduling feature.
@@ -301,7 +405,7 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                     enhancing your development workflow.
                 </p>
                 <a href="https://app.apitoolkit.io"
-                    class="animated-link link-fav-action bg-red-500 rounded w-fit mt-4 font-semibold flex items-center text-white px-4 py-2 hover:shadow-2xl">
+                    class="animated-link  bg-slate-900 rounded-lg w-fit mt-4 font-semibold flex items-center text-white px-4 py-2 hover:shadow-2xl">
                     <span>Schedule Tests</span>
                     &nbsp;
                     <svg class="hover-arrow" width="10" height="10" viewBox="0 0 10 10" aria-fill="green">
@@ -313,7 +417,7 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                 </a>
                 <div class="w-full flex flex-col mt-8">
                     <div
-                        class="w-full flex flex-col gap-16 items-center justify-center rounded-t-lg h-[min(75vw,600px)] bg-red-300 overflow-hidden">
+                        class="w-full flex flex-col gap-16 items-center justify-center rounded-t-lg h-[min(75vw,600px)] bg-slate-900 overflow-hidden">
                         <p class="space-x-2">
                             <span class="letter">C</span><span class="letter">O</span><span class="letter">M</span><span
                                 class="letter">I</span><span class="letter">N</span><span class="letter">G</span>
@@ -328,7 +432,7 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
         </section>
         <section class="w-full">
             <div class="w-[min(100%,1200px)] mx-auto">
-                <h3 class="mb-8">Developers love Testkit<span class="text-red-500 text-3xl">.</span></h3>
+                <h3 class="mb-8">Developers love Testkit</h3>
                 <div
                     class="relative  text-left grid grid-cols-1 w-full gap-6 lg:gap-8 sm:grid-cols-2 max-h-[33rem] mb-10 overflow-hidden">
                     <div class="w-full absolute bottom-0 bg-gradient-to-t from-white to-transparent  h-[30%] z-10">
@@ -466,10 +570,12 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                     tab.classList.remove("tab_active")
                 }
                 if (tab === "testkit") {
+                    document.querySelector("#file_name").innerText = "testkit.yaml"
                     document.querySelector("#tk_btn").classList.add("tab_active")
                     document.querySelector("#cypress-eg").classList.add("hidden")
                     document.querySelector("#testkit-eg").classList.remove("hidden")
                 } else {
+                    document.querySelector("#file_name").innerText = "cypress.js"
                     document.querySelector("#cp_btn").classList.add("tab_active")
                     document.querySelector("#testkit-eg").classList.add("hidden")
                     document.querySelector("#cypress-eg").classList.remove("hidden")

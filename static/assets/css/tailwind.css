@@ -46,7 +46,7 @@
 }
 
 .animated-link {
-  padding: 0.5em 0.8em;
+  font-size: 18px;
 }
 
 .animated-link:hover .hover-arrow .hover-arrow-tip {
@@ -67,7 +67,7 @@
   display: none;
 }
 .tab_active {
-  @apply border-b-red-500 border-b-2 text-red-500;
+  @apply border-b-slate-900 border-b-2 text-slate-900;
 }
 .yaml_key {
   @apply text-blue-300;
