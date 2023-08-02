@@ -15,10 +15,10 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                     <h1>
                         <span data-br=":Ra2r6r9ja:" data-brr="1"
                             style="display: inline-block; vertical-align: top; text-decoration: inherit; max-width: 671px;">
-                            <span
-                                class="text-[26px] leading-[32px] sm:text-3xl md:text-5xl md:leading-tight font-bold text-black">
+                            <span:
+                                class="text-[30px] leading-[36px] sm:text-3xl md:text-5xl md:leading-tight font-bold text-black">
                                 Quality Assurance <br> at Scale with Testkit.
-                            </span>
+                        </span>
                         </span>
                     </h1>
                     <p class="mt-4 max-w-lg text-base md:text-lg text-gray-600">
@@ -75,25 +75,24 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                     YAML or with our intuitive
                     interface that makes testing a breeze.
                 </p>
-                <div class="w-full flex flex-col mt-8">
-                    <div class="flex gap-4 mb-4">
-                        <button class="tab_btn px-2 font-bold text-slate-500 tab_active"
-                            onclick="changeExampleTab('testkit')" id="tk_btn">Testkit</button>
-                        <button class="tab_btn font-bold text-slate-500 px-2" onclick="changeExampleTab('cypress')"
-                            id="cp_btn">Cypress</button>
-                    </div>
+                <div class="flex flex-col mt-8">
                     <div class="relative">
-                        <div class="-mx-4 sm:mx-0">
+                        <div class="-mx-2 sm:mx-0">
                             <div
                                 class="relative overflow-hidden  flex bg-slate-800 h-[31.625rem] max-h-[60vh]] sm:rounded-xl lg:h-[34.6875rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10">
                                 <div class="relative w-full flex flex-col">
-                                    <div class="flex-none border-b border-slate-500/30 flex items-center gap-8">
+                                    <div class="flex-none border-b border-slate-500/30 flex items-center gap-4">
                                         <div class="flex items-center h-8 space-x-1.5 px-3">
                                             <div class="w-2.5 h-2.5 bg-slate-600 rounded-full"></div>
                                             <div class="w-2.5 h-2.5 bg-slate-600 rounded-full"></div>
                                             <div class="w-2.5 h-2.5 bg-slate-600 rounded-full"></div>
                                         </div>
-                                        <span class="text-slate-400 text-sm" id="file_name">test.tk.yaml</span>
+                                        <div class="flex gap-4">
+                                            <button class="tab_btn px-2 text-sm text-slate-200 tab_active"
+                                                onclick="changeExampleTab('testkit')" id="tk_btn">testkit.yaml</button>
+                                            <button class="tab_btn text-sm text-slate-200 px-2"
+                                                onclick="changeExampleTab('cypress')" id="cp_btn">cypress.js</button>
+                                        </div>
                                     </div>
                                     <div class="relative min-h-0 flex-auto flex flex-col">
                                         <div class="w-full flex-auto flex min-h-0 overflow-auto">
@@ -243,7 +242,7 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                 </div>
             </div>
             <div class="overflow-hidden border-t">
-                <div class="our_container mx-auto my-24 text-left">
+                <div class="our_container mx-auto my-16 md:my-24 text-left">
                     <div class="section-padding-top section-padding-bottom container">
                         <div class="flex flex-col items-center md:justify-between md:flex-row md:space-x-10">
                             <div class="space-y-4 max-w-xl">
@@ -331,7 +330,7 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                 </div>
             </div>
             <div class="overflow-hidden border-t">
-                <div class="our_container mx-auto my-24 text-left">
+                <div class="our_container mx-auto my-16 md:my-24 text-left">
                     <div class="section-padding-top section-padding-bottom container">
                         <div class="flex flex-col items-center md:justify-between md:flex-row md:space-x-10">
                             <div class="space-y-4 max-w-xl">
@@ -416,7 +415,7 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
         </section>
         <section class="w-full">
             <div class="w-[min(100%,1200px)] mx-auto my-24">
-                <h3 class="mb-8">Developers love Testkit</h3>
+                <h3 class="mb-16">Developers love Testkit</h3>
                 <div
                     class="relative  text-left grid grid-cols-1 w-full gap-6 lg:gap-8 sm:grid-cols-2 max-h-[33rem] mb-10 overflow-hidden">
                     <div class="w-full absolute bottom-0 bg-gradient-to-t from-white to-transparent  h-[30%] z-10">
@@ -554,12 +553,10 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                     tab.classList.remove("tab_active")
                 }
                 if (tab === "testkit") {
-                    document.querySelector("#file_name").innerText = "testkit.yaml"
                     document.querySelector("#tk_btn").classList.add("tab_active")
                     document.querySelector("#cypress-eg").classList.add("hidden")
                     document.querySelector("#testkit-eg").classList.remove("hidden")
                 } else {
-                    document.querySelector("#file_name").innerText = "cypress.js"
                     document.querySelector("#cp_btn").classList.add("tab_active")
                     document.querySelector("#testkit-eg").classList.add("hidden")
                     document.querySelector("#cypress-eg").classList.remove("hidden")

@@ -67,7 +67,7 @@
   display: none;
 }
 .tab_active {
-  @apply border-b-slate-900 border-b-2 text-slate-900;
+  @apply border-b-lime-300 border-b-2;
 }
 .yaml_key {
   @apply text-blue-300;
