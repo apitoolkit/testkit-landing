@@ -2830,6 +2830,11 @@ img {
 }
 
 @media (min-width: 1024px) {
+  .lg\:my-24 {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+
   .lg\:block {
     display: block;
   }
