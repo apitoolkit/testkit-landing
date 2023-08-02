@@ -26,30 +26,6 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                         less effort.
                     </p>
                 </div>
-                <div class="relative -mx-5 mt-8 ring-1 ring-slate-900/5 sm:mx-0 sm:rounded-2xl w-fit">
-                    <div class="relative flex flex-col bg-slate-50 py-8 px-16 sm:rounded-2xl">
-                        <p class="flex items-center"><span class="text-[2.5rem] leading-none text-slate-900">$<span
-                                    class="font-bold">49</span></span><span class="ml-3 text-sm"><span
-                                    class="font-semibold text-slate-900">one-time payment</span><br><span
-                                    class="text-slate-500">.</span></span></p>
-                        <p class="order-last -mx-1 mt-4 flex text-sm leading-6 text-slate-500 sm:space-x-2">
-                            <span class="hidden sm:inline">Lifetime access.</span><span class="hidden sm:inline">Free
-                                updates.</span><span class="sm:hidden">Includes
-                                lifetime access and free updates.</span>
-                        </p>
-                        <a href="https://www.github.com/apitoolkit/testkit/Examples"
-                            class="animated-link  bg-slate-900 rounded-lg mt-4 w-48 flex justify-center font-semibold items-center text-white py-1 hover:shadow-2xl">
-                            <span>Get Desktop App</span>
-                            &nbsp;
-                            <svg class="hover-arrow" width="10" height="10" viewBox="0 0 10 10" aria-fill="green">
-                                <g fill-rule="evenodd">
-                                    <path class="hover-arrow-line" d="M0 5h7"></path>
-                                    <path class="hover-arrow-tip" d="M1 1l4 4-4 4"></path>
-                                </g>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
             </div>
 
         </section>
@@ -124,7 +100,7 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
 23
 24
 25
-</div><code class="flex-auto relative block text-slate-50 pt-4 pb-4 px-4 overflow-auto">- <span class="yaml_key">name</span>: <span class="yaml_val_str">Current User</span>
+</div><code class="flex-auto relative block text-slate-50 pt-4 pb-4 px-4 overflow-auto">- <span class="yaml_key">title</span>: <span class="yaml_val_str">Current User</span>
   <span class="yaml_key">GET</span>: <span class="yaml_val_str">'$.env.APIURL/user'</span>
   <span class="yaml_key">headers</span>:
     <span class="yaml_key">Content-Type</span>: <span class="yaml_val_str">application/json</span>
@@ -138,7 +114,7 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
   <span class="yaml_key">exports</span>:
     <span class="yaml_key">userID</span>: <span class="yaml_val_str">$.resp.json.user.id</span>
     <span class="yaml_key">updatedAt</span>: <span class="yaml_val_str">$.resp.json.user.updatedAt</span>
-- <span class="yaml_key">name</span>: <span class="yaml_val_str">Update User</span>
+- <span class="yaml_key">title</span>: <span class="yaml_val_str">Update User</span>
   <span class="yaml_key">PUT</span>: <span class="yaml_val_str">'$.env.APIURL/user'</span>
   <span class="yaml_key">headers</span>:
     <span class="yaml_key">Content-Type</span>: <span class="yaml_val_str">application/json</span>
@@ -244,7 +220,7 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                 </div>
             </div>
             <div class="overflow-hidden border-t -mt-4 z-50 bg-white" style="isolation:isolate; z-index: 1;">
-                <div class="our_container mx-auto my-24 text-left flex justify-between">
+                <div class="our_container mx-auto my-14 md:my-24 text-left flex justify-between">
                     <div class="space-y-4 max-w-xl">
                         <div class="space-y-3">
                             <h1><span class="text-lg md:text-xl font-bold text-black">Blazing Fast</span>
@@ -325,7 +301,8 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                 </div>
             </div>
             <div class="overflow-hidden border-t">
-                <div class="our_container mx-auto my-24 text-left flex justify-between items-center">
+                <div
+                    class="our_container mx-auto my-14 md:my-24 text-left flex flex-col sm:flex-row justify-between gap-6 items-center">
                     <div class="space-y-4 max-w-xl">
                         <div class="space-y-3">
                             <h1><span class="text-lg md:text-xl font-bold text-black">No code API testing</span>
@@ -337,7 +314,7 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                                 </span>
                             </p>
                         </div>
-                        <a href="https://www.github.com/apitoolkit/testkit"
+                        <!-- <a href="https://www.github.com/apitoolkit/testkit"
                             class="animated-link  bg-slate-900 rounded-lg w-fit mt-4 font-semibold flex items-center text-white px-4 py-1 hover:shadow-2xl">
                             <span>Get desktop app</span>
                             &nbsp;
@@ -347,9 +324,33 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                                     <path class="hover-arrow-tip" d="M1 1l4 4-4 4"></path>
                                 </g>
                             </svg>
-                        </a>
+                        </a> -->
                     </div>
-                    <img src="/assets/img/build.svg" alt="" class="hidden sm:block" style="height: 250px;">
+                    <div class="relative ring-1 ring-slate-900/5 sm:mx-0 sm:rounded-2xl">
+                        <div class="relative flex flex-col bg-slate-50 py-4 px-10 sm:rounded-2xl">
+                            <p class="flex items-center"><span class="text-[2.5rem] leading-none text-slate-900">$<span
+                                        class="font-bold">49</span></span><span class="ml-3 text-sm"><span
+                                        class="font-semibold text-slate-900">one-time payment</span></span></p>
+                            <p class="order-last mt-2 flex text-xs leading-6 text-slate-500 sm:space-x-2">
+                                <span class="">Lifetime access.</span>
+                                <span class="">Free
+                                    updates.
+                                </span>
+                            </p>
+                            <a href="https://www.github.com/apitoolkit/testkit"
+                                class="animated-link  bg-slate-900 rounded-lg mt-4 w-48 flex justify-center font-semibold items-center text-white py-1 hover:shadow-2xl">
+                                <span>Get Desktop App</span>
+                                &nbsp;
+                                <svg class="hover-arrow" width="10" height="10" viewBox="0 0 10 10" aria-fill="green">
+                                    <g fill-rule="evenodd">
+                                        <path class="hover-arrow-line" d="M0 5h7"></path>
+                                        <path class="hover-arrow-tip" d="M1 1l4 4-4 4"></path>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <img src="/assets/img/build.svg" alt="" class="hidden sm:block" style="height: 250px;"> -->
                 </div>
             </div>
         </section>
@@ -388,7 +389,7 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                 </div>
             </div>
             <div class="overflow-hidden border-t">
-                <div class="our_container mx-auto my-24 text-left flex justify-between items-center">
+                <div class="our_container mx-auto my-14 md:my-24 text-left flex justify-between gap-6 items-center">
                     <div class="space-y-4 max-w-xl">
                         <div class="space-y-3">
                             <h1><span class="text-lg md:text-xl font-bold text-black">Automate API testing and
