@@ -1409,6 +1409,11 @@ img {
   margin-right: -0.5rem;
 }
 
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
