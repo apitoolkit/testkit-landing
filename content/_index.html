@@ -76,7 +76,8 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                     interface that makes testing a breeze.
                 </p>
                 <div class="flex flex-col mt-8">
-                    <div class="relative bg-slate-50 rounded-lg p-4 md:p-10 shadow-lg" style="z-index: -1;">
+                    <div class="relative bg-slate-50 bg-no-repeat bg-cover bg-[url(/assets/img/gradient.webp)] rounded-lg p-4 md:p-8 shadow-2xl"
+                        style="z-index: 0;">
                         <div class="-mx-4 sm:mx-0">
                             <div
                                 class="relative overflow-hidden  flex bg-slate-800 h-[31.625rem] max-h-[60vh]] sm:rounded-xl lg:h-[34.6875rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10">
@@ -88,9 +89,10 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                                             <div class="w-2.5 h-2.5 bg-slate-600 rounded-full"></div>
                                         </div>
                                         <div class="flex gap-4">
-                                            <button class="tab_btn px-2 text-sm text-slate-200 tab_active"
+                                            <button
+                                                class="tab_btn px-2 text-sm cursor-pointer text-slate-200 tab_active"
                                                 onclick="changeExampleTab('testkit')" id="tk_btn">testkit.yaml</button>
-                                            <button class="tab_btn text-sm text-slate-200 px-2"
+                                            <button class="tab_btn text-sm cursor-pointer text-slate-200 px-2"
                                                 onclick="changeExampleTab('cypress')" id="cp_btn">cypress.js</button>
                                         </div>
                                     </div>
@@ -241,7 +243,7 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                     </div>
                 </div>
             </div>
-            <div class="overflow-hidden border-t -mt-4 z-50 bg-white">
+            <div class="overflow-hidden border-t -mt-4 z-50 bg-white" style="isolation:isolate; z-index: 1;">
                 <div class="our_container mx-auto my-24 text-left flex justify-between">
                     <div class="space-y-4 max-w-xl">
                         <div class="space-y-3">

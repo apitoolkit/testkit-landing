@@ -1362,6 +1362,10 @@ img {
   top: 0px;
 }
 
+.isolate {
+  isolation: isolate;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1955,6 +1959,10 @@ img {
 
 .bg-\[url\(\/assets\/img\/poly-bg\.svg\)\] {
   background-image: url(/assets/img/poly-bg.svg);
+}
+
+.bg-\[url\(\/assets\/img\/gradient\.webp\)\] {
+  background-image: url(/assets/img/gradient.webp);
 }
 
 .from-white {
@@ -2910,6 +2918,10 @@ img {
 
   .md\:p-10 {
     padding: 2.5rem;
+  }
+
+  .md\:p-8 {
+    padding: 2rem;
   }
 
   .md\:text-5xl {
