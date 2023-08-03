@@ -618,6 +618,12 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
 
         <script type="text/javascript">
             const btns = document.querySelectorAll('.pre-order_btn')
+            Paddle.Setup({
+                vendor: 147278,
+                debug: true // Set to true for testing/debugging,
+
+            });
+
             btns.forEach(btn => {
                 btn.addEventListener('click', function () {
                     Paddle.Checkout.open({
