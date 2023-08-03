@@ -27,17 +27,30 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                     </p>
                     <p class="text-sm mt-4 text-gray-500"><span>pre-order for lifetime access as an early
                             supporter</span></p>
-                    <a href="https://www.github.com/apitoolkit/testkit"
-                        class="animated-link  bg-slate-900 rounded-lg w-fit mt-6 font-semibold flex items-center text-white px-4 py-2 hover:shadow-2xl">
-                        <span>Pre-order test client </span>
-                        &nbsp;
-                        <svg class="hover-arrow" width="10" height="10" viewBox="0 0 10 10" aria-fill="green">
-                            <g fill-rule="evenodd">
-                                <path class="hover-arrow-line" d="M0 5h7"></path>
-                                <path class="hover-arrow-tip" d="M1 1l4 4-4 4"></path>
-                            </g>
-                        </svg>
-                    </a>
+                    <div class="flex flex-col gap-4 sm:flex-row">
+                        <button
+                            class="pre-order_btn animated-link  bg-slate-900 rounded-lg w-fit mt-6 font-semibold flex items-center text-white px-4 py-2 hover:shadow-2xl">
+                            <span>Pre-order test client </span>
+                            &nbsp;
+                            <svg class="hover-arrow" width="10" height="10" viewBox="0 0 10 10" aria-fill="green">
+                                <g fill-rule="evenodd">
+                                    <path class="hover-arrow-line" d="M0 5h7"></path>
+                                    <path class="hover-arrow-tip" d="M1 1l4 4-4 4"></path>
+                                </g>
+                            </svg>
+                        </button>
+                        <a href="/docs"
+                            class="animated-link  bg-slate-100 rounded-lg mt-6 font-semibold flex items-center text-slate-900 border-slate-900 border-2 px-6 py-2 hover:shadow-2xl">
+                            <span>Learn more</span>
+                            &nbsp;
+                            <svg class="hover-arrow" width="10" height="10" viewBox="0 0 10 10" aria-fill="green">
+                                <g fill-rule="evenodd">
+                                    <path class="hover-arrow-line" d="M0 5h7"></path>
+                                    <path class="hover-arrow-tip" d="M1 1l4 4-4 4"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
                 <!-- <div
                     class="relative bg-slate-50 bg-no-repeat max-w-xl bg-cover bg-[url(/assets/img/gradient.webp)] mt-6 h-96 rounded-lg p-4 md:p-8">
@@ -601,7 +614,26 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
                 </div>
             </div>
         </section>
+        <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+
         <script type="text/javascript">
+            const btns = document.querySelectorAll('.pre-order_btn')
+            btns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    Paddle.Checkout.open({
+                        product: 845340,
+                        email: '', // Replace with customer's email
+                        passthrough: 'customer_id=123',
+                        successCallback: function (data) {
+                            console.log('Payment successful:', data);
+                        },
+                        closeCallback: function () {
+                            console.log('Checkout closed without purchase.');
+                        }
+                    });
+                });
+            });
+
             function changeExampleTab(tab) {
                 for (let tab of Array.from(document.querySelectorAll(".tab_btn"))) {
                     tab.classList.remove("tab_active")
