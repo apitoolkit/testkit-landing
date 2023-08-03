@@ -1,7 +1,7 @@
 <html prefix="og: http://ogp.me/ns#" lang="{{ .Language }}">
 {{- partial "head.html" . -}}
 
-<body class="relative font-[inter]" onscroll="scrollfunc(this)">
+<body class="relative font-[inter]">
   {{- partial "header.html" . -}}
   <div class="header_scrolled sticky top-0 flex flex-col items-center w-full text-center z-10" id="header">
     <nav class="our_container w-full">
@@ -55,15 +55,18 @@
 
   {{- partial "footer.html" . -}}
   <script>
-    // function scrollfunc(e) {
-    //   const h = document.querySelector("#header")
-    //   if (e.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    //     h.classList.add("header_scrolled")
-    //   } else {
-    //     h.classList.remove("header_scrolled")
-    //   }
-    // }
-
+    function scrollToPricing(e) {
+      e.preventDefault()
+      console.log(window.location.pathname)
+      if (window.location.pathname !== "/") {
+        window.location.assign("/#pricing");
+      } else {
+        const pricing = document.querySelector("#pricing");
+        if (pricing) {
+          pricing.scrollIntoView({ behavior: "smooth" })
+        }
+      }
+    }
   </script>
 </body>
 

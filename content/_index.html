@@ -603,15 +603,6 @@ description: 'Deliver Quality Assurance at Scale made easy with Testkit'
             </div>
         </section>
         <script type="text/javascript">
-
-            function scrollToPricing(e) {
-                e.preventDefault()
-                const pricing = document.querySelector("#pricing");
-                if (pricing) {
-                    pricing.scrollIntoView({ behavior: "smooth" })
-                }
-            }
-
             function changeExampleTab(tab) {
                 for (let tab of Array.from(document.querySelectorAll(".tab_btn"))) {
                     tab.classList.remove("tab_active")
