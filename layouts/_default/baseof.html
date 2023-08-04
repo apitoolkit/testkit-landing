@@ -7,7 +7,7 @@
     <nav class="our_container w-full">
       <div class="flex flex-row justify-between items-center py-2">
         <a href="/" class="text-2xl font-bold">Testkit<span class="text-red-500 text-3xl">.</span></a>
-        <ul class="items-center gap-1 flex text-xm md:gap-8">
+        <ul class="items-center hidden md:flex gap-1 text-xm md:gap-8">
           <a target="_self" class="text-gray-900 inline-flex justify-center items-center px-1 pt-1 text-md font-medium"
             onclick="scrollToPricing(event)" href="#pricing">
             <div
@@ -47,6 +47,60 @@
             </div>
           </a>
         </ul>
+        <div class="block md:hidden">
+          <button class="flex items-center text-slate-600 p-3" onclick="showMenu()">
+            <svg class="block h-5 w-5 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Mobile menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+          </button>
+          <div class="fixed z-10 right-0 hidden top-0 w-full h-screen bg-[rgba(0,0,0,0.1)]" id="menu_container"
+            onclick="hideMenu(event)">
+            <ul class="bg-white border py-16 px-8 flex w-fit ml-auto flex-col  gap-1 text-xm md:gap-8" id="menu">
+              <a target="_self"
+                class="text-gray-900 inline-flex justify-center items-center px-1 pt-1 text-md font-medium"
+                onclick="scrollToPricing(event)" href="#pricing">
+                <div
+                  class="hover:bg-black/5 space-x-3 transition-all duration-300 inline-flex items-center justify-center py-2 px-3 rounded-xl">
+                  <div class="flex h-5"><svg class="h-full w-auto" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.5 8H21.5M6 12H10M8.4 21H15.6C17.8402 21 18.9603 21 19.816 20.564C20.5686 20.1805 21.1805 19.5686 21.564 18.816C22 17.9603 22 16.8402 22 14.6V9.4C22 7.15979 22 6.03968 21.564 5.18404C21.1805 4.43139 20.5686 3.81947 19.816 3.43597C18.9603 3 17.8402 3 15.6 3H8.4C6.15979 3 5.03968 3 4.18404 3.43597C3.43139 3.81947 2.81947 4.43139 2.43597 5.18404C2 6.03968 2 7.15979 2 9.4V14.6C2 16.8402 2 17.9603 2.43597 18.816C2.81947 19.5686 3.43139 20.1805 4.18404 20.564C5.03968 21 6.15979 21 8.4 21Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div><span>Pricing</span>
+                </div>
+              </a>
+              <a target="_self"
+                class="text-gray-900 inline-flex justify-center items-center px-1 pt-1 text-md font-medium"
+                href="/download">
+                <div
+                  class="hover:bg-black/5 space-x-3 transition-all duration-300 inline-flex items-center justify-center py-2 px-3 rounded-xl">
+                  <div class="flex h-5"><svg class="h-full w-auto" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M3.2 18C1.88484 17.235 1 15.8051 1 14.1674C1 12.1053 2.40285 10.3727 4.30122 9.88197C4.30041 9.83571 4.3 9.78935 4.3 9.7429C4.3 5.46661 7.74741 2 12 2C15.6211 2 18.6584 4.51348 19.4806 7.90009C21.5395 8.69955 23 10.7089 23 13.0613C23 14.8707 22.1359 16.4772 20.8 17.4862M12 13V22M12 22L15.5 18.5M12 22L8.5 18.5"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div><span>Download</span>
+                </div>
+              </a>
+              <a target="_self"
+                class="text-gray-900 inline-flex justify-center items-center px-1 pt-1 text-md font-medium"
+                href="/docs">
+                <div
+                  class="hover:bg-black/5 space-x-3 transition-all duration-300 inline-flex items-center justify-center py-2 px-3 rounded-xl">
+                  <div class="flex h-5"><svg class="h-full w-auto" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4 19.5V8.4C4 6.15979 4 5.03968 4.43597 4.18404C4.81947 3.43139 5.43139 2.81947 6.18404 2.43597C7.03968 2 8.15979 2 10.4 2H13.6C15.8402 2 16.9603 2 17.816 2.43597C18.5686 2.81947 19.1805 3.43139 19.564 4.18404C20 5.03968 20 6.15979 20 8.4V17.5M9 7H15M20 17H6.5C5.11929 17 4 18.1193 4 19.5V19.5C4 20.8807 5.11929 22 6.5 22H15C15.9293 22 16.394 22 16.7804 21.9231C18.3671 21.6075 19.6075 20.3671 19.9231 18.7804C20 18.394 20 17.9293 20 17V17Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </div>
+                  <span>Docs</span>
+                </div>
+              </a>
+            </ul>
+          </div>
+        </div>
       </div>
     </nav>
   </div>
@@ -55,12 +109,22 @@
 
   {{- partial "footer.html" . -}}
   <script>
+    function showMenu() {
+      document.querySelector("#menu_container").classList.toggle('hidden')
+    }
+
+    function hideMenu(event) {
+      if (event.target.id === "menu_container") {
+        document.querySelector("#menu_container").classList.toggle('hidden')
+      }
+    }
+
     function scrollToPricing(e) {
       e.preventDefault()
-      console.log(window.location.pathname)
       if (window.location.pathname !== "/") {
         window.location.assign("/#pricing");
       } else {
+        document.querySelector("#menu_container").classList.toggle('hidden')
         const pricing = document.querySelector("#pricing");
         if (pricing) {
           pricing.scrollIntoView({ behavior: "smooth" })
