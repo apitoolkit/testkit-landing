@@ -11,6 +11,8 @@ menu:
 Testkit Usage Documentation.
 {{% /pageinfo %}}
 
+# Testkit Documentation
+
 ## Introduction
 
 Testkit is a testing tool designed for API manual testing and test automation tasks. It provides a simplified yaml syntax for defining and executing API test scenarios.
@@ -42,7 +44,49 @@ FYI, this table of contents reflects the current sections covered in the documen
 
 ## Installation
 
-To install the `testkit` testing tool, follow the steps below:
+To install the `testkit` testing tool, follow one of the options below:
+
+#### Download binaries:
+
+1. Navigate to the releases page and proceed to install the testkit binary suitable for your operating system (linux, mac and windows).
+   [Check releases](https://github.com/apitoolkit/testkit/releases/release-test)
+2. After download the binary for your OS, add it to evironment path and run
+
+```bash
+testkit test --file  <test.yaml>
+```
+
+replace <test.yaml> with your test file name
+
+#### macOS
+
+To install Testkit on macOS using Homebrew, follow these steps:
+
+1. Tap the Testkit release repository:
+
+   ```bash
+   brew tap apitoolkit/testkit
+   ```
+
+   Tapping the repository adds it as a source for Homebrew formulae.
+
+2. Install Testkit:
+
+   ```bash
+   brew install testkit
+   ```
+
+   This command will download and install Testkit on your macOS system.
+
+3. Add testkit to your environment path and Run testkit
+
+```bash
+testkit test --file <test.yaml>
+```
+
+replace <test.yaml> with your test file name
+
+#### Clone repository:
 
 1. Ensure you have Rust programming language and Cargo package manager installed on your system. You can download them from the official Rust website: [https://www.rust-lang.org/](https://www.rust-lang.org/).
 
@@ -71,7 +115,7 @@ To install the `testkit` testing tool, follow the steps below:
 To run the `testkit` testing tool, use the following command:
 
 ```bash
-RUST_LOG=debug cargo run -- --file ./test.yaml
+RUST_LOG=debug cargo run -- test --file ./test.tk.yaml
 ```
 
 Make sure to replace `./test.yaml` with the path to your YAML test file.
